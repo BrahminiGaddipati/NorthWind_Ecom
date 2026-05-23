@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --font-outfit: 'Outfit', sans-serif;
+  
+  /* Modern Luxury Champagne & Slate Theme Palette */
+  --color-bg-base: #f9f8f6;
+  --color-bg-card: rgba(255, 255, 255, 0.7);
+  --color-bg-sidebar: #1f1e1d;
+  --color-border: rgba(197, 190, 175, 0.35);
+  --color-text-main: #1c1b1a;
+  --color-text-muted: #5e5a52;
+  --color-primary: #7c6f50;
+  --color-primary-hover: #5d5239;
+  --color-success: #2e7d32;
+  --color-danger: #c62828;
+  --color-warning: #f57c00;
+}
+
+body {
+  font-family: var(--font-outfit), 'Inter', sans-serif;
+  background-color: var(--color-bg-base);
+  color: var(--color-text-main);
+}
+
+/* Glassmorphism custom panels */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(124, 111, 80, 0.04);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 20px 0 rgba(124, 111, 80, 0.02);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px 0 rgba(124, 111, 80, 0.08);
+  border-color: rgba(124, 111, 80, 0.3);
+}
+
+/* Elegant Table Design */
+.premium-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.premium-table th {
+  background: rgba(124, 111, 80, 0.06);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+  padding: 1rem;
+}
+
+.premium-table td {
+  padding: 1rem;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color 0.2s ease;
+}
+
+.premium-table tr:hover td {
+  background-color: rgba(124, 111, 80, 0.02);
+}
+
+/* Micro-animations */
+.hover-scale {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+/* Input Fields styling */
+.premium-input {
+  width: 100%;
+  padding: 0.625rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  background-color: rgba(255, 255, 255, 0.6);
+  outline: none;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.premium-input:focus {
+  border-color: var(--color-primary);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(124, 111, 80, 0.15);
+}
+
+/* Button styling */
+.premium-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  background-color: var(--color-primary);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.premium-btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  box-shadow: 0 4px 12px rgba(124, 111, 80, 0.25);
+  transform: translateY(-1px);
+}
+
+.premium-btn-primary:active {
+  transform: translateY(0);
+}
+
+.premium-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  color: var(--color-text-main);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--color-border);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.premium-btn-secondary:hover {
+  background-color: #ffffff;
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(124, 111, 80, 0.25);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(124, 111, 80, 0.45);
+}
